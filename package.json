@@ -1,0 +1,33 @@
+{
+  "name": "sponge",
+  "version": "0.0.0",
+  "description": "Reimplementation of sponge from moreutils",
+  "author": "Eugene Sharygin <eush77@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "homepage": "https://github.com/eush77/node-sponge",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eush77/node-sponge"
+  },
+  "bugs": {
+    "url": "https://github.com/eush77/node-sponge/issues"
+  },
+  "keywords": [
+    "sponge",
+    "moreutils",
+    "node",
+    "stream",
+    "stdin",
+    "stdout",
+    "file",
+    "accumulate",
+    "read",
+    "write",
+    "buffer"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}
