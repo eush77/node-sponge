@@ -7,6 +7,10 @@
   "bin": {
     "sponge": "cli.js"
   },
+  "files": [
+    "cli.js",
+    "index.js"
+  ],
   "scripts": {
     "test": "PATH=\"$PWD:$PATH\" urchin test"
   },
