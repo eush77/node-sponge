@@ -15,7 +15,7 @@ module.exports = function (file) {
   }
   else {
     var readable = through();
-    var writable = concat(readable.write.bind(readable));
+    var writable = concat(readable.end.bind(readable));
     return duplexer(writable, readable);
   }
 };
