@@ -18,9 +18,13 @@ test('transform', function (t) {
 
 
 test('writable', function (t) {
+  var writeblock = true;
+
   sponge.__set__('fs', {
     createWriteStream: function (file) {
+      t.false(writeblock, 'writeblock');
       t.equal(file, 'file', 'destination file');
+
       return concat({ encoding: 'string' }, function (foo) {
         t.equal(foo, 'foo', 'content');
         t.end();
@@ -28,5 +32,16 @@ test('writable', function (t) {
     }
   });
 
-  sponge('file').end('foo');
+
+  var spongeStream = sponge('file');
+  spongeStream.write('f');
+
+  process.nextTick(function () {
+    spongeStream.write('o');
+
+    setTimeout(function () {
+      spongeStream.end('o');
+      writeblock = false;
+    }, 0);
+  });
 });
