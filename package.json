@@ -4,8 +4,11 @@
   "description": "Reimplementation of sponge from moreutils",
   "author": "Eugene Sharygin <eush77@gmail.com>",
   "license": "MIT",
+  "bin": {
+    "sponge": "cli.js"
+  },
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "PATH=\"$PWD:$PATH\" urchin test"
   },
   "homepage": "https://github.com/eush77/node-sponge",
   "repository": {
@@ -29,5 +32,7 @@
     "buffer"
   ],
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "urchin": "0.0.5"
+  }
 }
