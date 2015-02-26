@@ -12,7 +12,9 @@
     "index.js"
   ],
   "scripts": {
-    "test": "PATH=\"$PWD:$PATH\" urchin test"
+    "test": "npm run apitest && npm run clitest",
+    "apitest": "tape test/api/*.js",
+    "clitest": "PATH=\"$PWD:$PATH\" urchin -f test/cli"
   },
   "homepage": "https://github.com/eush77/node-sponge",
   "repository": {
@@ -41,6 +43,8 @@
     "through2": "^0.6.3"
   },
   "devDependencies": {
+    "rewire": "^2.3.1",
+    "tape": "^3.5.0",
     "urchin": "0.0.5"
   }
 }
