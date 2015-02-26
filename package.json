@@ -1,6 +1,6 @@
 {
   "name": "sponge",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Reimplementation of sponge from moreutils",
   "author": "Eugene Sharygin <eush77@gmail.com>",
   "license": "MIT",
