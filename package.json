@@ -31,7 +31,11 @@
     "write",
     "buffer"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "concat-stream": "^1.4.7",
+    "duplexer2": "0.0.2",
+    "through2": "^0.6.3"
+  },
   "devDependencies": {
     "urchin": "0.0.5"
   }
